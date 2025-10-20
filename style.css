@@ -1,0 +1,130 @@
+/* Genel Ayarlar */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+/* Header (Başlık Alanı) */
+header {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Bölümler */
+section {
+    background: #fff;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section h2 i {
+    margin-right: 10px;
+}
+
+/* Deneyim ve Eğitim */
+.job, .education {
+    margin-bottom: 1.5rem;
+}
+
+.job h3, .education h3 {
+    margin: 0;
+    color: #007BFF; /* Mavi bir başlık rengi */
+}
+
+.job p, .education p {
+    margin: 0.2rem 0;
+    font-style: italic;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Yetenekler */
+.skills {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    background: #007BFF;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* İletişim */
+.contact-links {
+    list-style: none;
+    padding: 0;
+}
+.contact-links li {
+    margin-bottom: 0.5rem;
+}
+.contact-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+.contact-links a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+.contact-links i {
+    margin-right: 10px;
+    color: #007BFF;
+}
+
+/* Footer (Alt Bilgi) */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+/* Mobil Uyumlu Tasarım */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}
