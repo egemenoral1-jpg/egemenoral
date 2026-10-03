@@ -92,7 +92,8 @@
   <h1>Short Prompts vs Long Prompts: I Wrote a 38-Section Prompt and Got a Worse Result</h1>
   <p class="meta">By Egemen Oral · October 4, 2026 · 5 min read</p>
 
-  <p class="lede">A few weeks ago I wanted to turn my portfolio into the living room from <em>Regular Show</em>. Each VHS tape would be one of my GitHub projects, and when you click one, Mordecai puts it into an old CRT and the project plays on the screen. I built it with Claude, an AI coding assistant, over a couple of days. The way it went surprised me, so I'm writing it down.</p>
+  <p class="lede">I saw someone build a project around the look of a cartoon, and I liked the idea so much that I wanted to make something with a cartoon too. I picked <em>Regular Show</em> and decided to turn my portfolio into its living room: each VHS tape is one of my GitHub projects, and when you click one, Mordecai puts it into an old CRT and the project plays on the screen.</p>
+  <p>I built it with Claude, an AI coding assistant, over a couple of days. How it went was not what I expected, so I'm writing it down.</p>
 
   <h2>The long prompt (38 sections)</h2>
   <p>My first attempt was a short message with one image, and it came out pretty basic. I decided the problem was that I hadn't been specific enough, so I went the other way.</p>
@@ -111,19 +112,19 @@
     <figcaption>Picking a tape in the first version.</figcaption>
   </figure>
 
-  <p>It worked. It just wasn't something you'd want to click twice. It looked like a placeholder for the thing I had in my head.</p>
-  <p>I don't think the AI did a bad job. It did what I wrote. The problem was what I wrote: pages about how the code should be organised and almost nothing about how the thing should feel. Two days later I was asking for 3D.</p>
+  <p>Honestly, my first reaction was: after explaining all of that, this is it? It worked, but it was nothing like what I had imagined.</p>
+  <p>I don't think the AI did a bad job, though. It did what I wrote. The problem was what I wrote: pages about how the code should be organised and almost nothing about how the thing should look or feel. Two days later I was asking for 3D anyway.</p>
 
   <h2>The short prompts</h2>
   <p>At some point I gave up on specs. I found a screenshot of the living room from the show and sent it with something like: make it look like this, these colours, this TV, Mordecai's hand. Keep my repos on the tapes. I'll leave the rest to you. (I actually wrote it in Turkish, but that's roughly it.)</p>
-  <p>That's when it got good. A 3D room with cartoon shading and black outlines, the yellow stairs, Pops on the wall, and an arm with real joints that grabs the tape and pushes it into the VCR.</p>
+  <p>This time the result was much closer to what I had in mind: a 3D room with cartoon shading and black outlines, the yellow stairs, Pops on the wall, and an arm with joints that grabs the tape and pushes it into the VCR.</p>
 
   <figure>
     <img src="../img/short-prompt-result-3d-portfolio-room.jpg" alt="Result of the short AI prompts: a cel-shaded 3D Regular Show style living room with a grey CRT TV, VHS tapes, a portrait of Pops and a yellow staircase" width="1280" height="720" loading="lazy">
     <figcaption>After a screenshot and a few sentences: the 3D version.</figcaption>
   </figure>
 
-  <p>It wasn't one magic message. The hand alone took several rounds. First it looked like a white glove. Then the fingertips turned into black blobs. Then the outlines were so thin you couldn't see them. What finally fixed it was me drawing a few lines over a screenshot in Paint and sending that. One ugly sketch did more than anything I had written.</p>
+  <p>It still took a lot of back and forth. The hand alone took several rounds: first it looked like a white glove, then the fingertips turned into black blobs, then the outlines were so thin you couldn't see them. In the end I opened a screenshot in Paint, drew the lines I wanted on the fingers and sent that, and it got it right away.</p>
 
   <figure>
     <img src="../img/short-prompt-result-mordecai-hand-vcr.jpg" alt="Mordecai's blue 3D hand pushing a VHS tape into the VCR under the CRT TV" width="1280" height="720" loading="lazy">
@@ -131,14 +132,16 @@
   </figure>
 
   <h2>Why the short prompts worked better</h2>
-  <p>Looking back, my long prompt was full of decisions I made before I had seen anything. Most of them were guesses and some were plain wrong, but because they were written as rules, they got followed instead of questioned.</p>
-  <p>It also turned the project into a checklist. With 38 requirements, being done meant meeting 38 requirements. Nowhere did it say "make it look good", so that's not where the effort went.</p>
-  <p>The screenshot did a lot of work. I could describe a "warm, nostalgic cartoon living room" a hundred different ways, and the AI could imagine it a hundred different ways too. A screenshot of the show only means one thing.</p>
-  <p>And reacting is easier than predicting. Saying "the fingers need black lines like this" while looking at the actual result is easy. Getting everything right up front, for something that doesn't exist yet, is not.</p>
+  <p>I've thought about this a bit, and I think most of it comes down to when I made my decisions. In the long prompt I decided almost everything before I had seen anything, so a lot of it was guessing. "NO 3D" was a guess, and it was wrong. But since I wrote everything as a rule, it all got followed.</p>
+  <p>The screenshot helped more than I expected. When I wrote things like "dark, nostalgic, cozy room", that could mean a lot of different rooms. The screenshot was the exact room I meant.</p>
+  <p>The other thing is that it's much easier for me to react to something than to describe it before it exists. Looking at the hand and saying "no, the fingers need black lines like this" was easy. Writing all of that up front would have been impossible, because I didn't know I wanted it yet.</p>
 
   <h2>So are short prompts always better?</h2>
   <p>No. My very first prompt was short too, and it gave me something basic. The length wasn't what changed. The later messages had a reference image, the one thing I really cared about (my five repos on the tapes), and room for the AI to decide the rest. Then I fixed whatever I didn't like when I saw it.</p>
-  <p>If the details really are the point, like an API or a data format, I'd still write them all down. But next time I build something visual, I'm starting with a picture and two sentences.</p>
+  <p>If the details really are the point, like an API or a data format, I'd still write them all down. But next time I build something visual, I'll start with a picture and a couple of sentences.</p>
+
+  <h2>Why I built it</h2>
+  <p>Part of the reason was my CV. A list of tools doesn't say much about a person. I wanted whoever looks at my portfolio to see that I'm open to learning, that I try things I haven't done before, and that I actually enjoy it. This project is probably the best example of that so far.</p>
 
   <h2>FAQ</h2>
   <h3>Are short prompts better than long prompts?</h3>
