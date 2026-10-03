@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Short Prompts vs Long Prompts: How to Get Better Results From AI | Egemen Oral</title>
+<meta name="description" content="Short prompts vs long prompts, tested on a real project: my 38-section AI prompt built a flat 2D site, three sentences and a screenshot built a 3D one. How to write better AI prompts.">
+<meta name="keywords" content="short prompts vs long prompts, how to write better AI prompts, prompt engineering tips, AI coding assistant, prompt length, vibe coding, Claude, build a portfolio with AI">
+<meta name="author" content="Egemen Oral">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://egemenoral.com/blog/short-prompts-vs-long-prompts-ai/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Egemen Oral">
+<meta property="og:title" content="Short Prompts vs Long Prompts: My 38-Section AI Prompt Lost to Three Sentences">
+<meta property="og:description" content="The same project, built twice with an AI coding assistant: a huge spec gave a flat 2D site, a short prompt with a screenshot gave a 3D one. What I learned about writing better AI prompts.">
+<meta property="og:url" content="https://egemenoral.com/blog/short-prompts-vs-long-prompts-ai/">
+<meta property="og:image" content="https://egemenoral.com/blog/img/short-prompt-result-3d-portfolio-room.jpg">
+<meta property="article:published_time" content="2026-10-04">
+<meta property="article:author" content="Egemen Oral">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Short Prompts vs Long Prompts: My 38-Section AI Prompt Lost to Three Sentences">
+<meta name="twitter:description" content="A real side-by-side test of long vs short AI prompts, with screenshots of both results.">
+<meta name="twitter:image" content="https://egemenoral.com/blog/img/short-prompt-result-3d-portfolio-room.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Short Prompts vs Long Prompts: My 38-Section AI Prompt Lost to Three Sentences",
+  "description": "Short prompts vs long prompts, tested on a real project: a 38-section AI prompt built a flat 2D site, three sentences and a screenshot built a 3D one.",
+  "image": [
+    "https://egemenoral.com/blog/img/short-prompt-result-3d-portfolio-room.jpg",
+    "https://egemenoral.com/blog/img/long-prompt-result-2d-room.jpg"
+  ],
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "author": { "@type": "Person", "name": "Egemen Oral", "url": "https://egemenoral.com/" },
+  "publisher": { "@type": "Person", "name": "Egemen Oral", "url": "https://egemenoral.com/" },
+  "mainEntityOfPage": "https://egemenoral.com/blog/short-prompts-vs-long-prompts-ai/",
+  "keywords": "short prompts vs long prompts, how to write better AI prompts, prompt engineering tips, AI coding assistant, prompt length"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Egemen Oral", "item": "https://egemenoral.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://egemenoral.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Short Prompts vs Long Prompts", "item": "https://egemenoral.com/blog/short-prompts-vs-long-prompts-ai/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Are short prompts better than long prompts for AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For creative and design work, often yes. A short prompt with a clear goal, a reference image and only the hard constraints leaves the model room to use its judgement, while a long spec locks in early guesses and turns the task into a checklist. For precise technical work such as APIs, detailed requirements are still useful." } },
+    { "@type": "Question", "name": "How long should an AI prompt be?",
+      "acceptedAnswer": { "@type": "Answer", "text": "As long as it takes to state the goal, show a reference and list the few constraints that truly cannot change, and no longer. Everything else is better handled through short rounds of feedback on what the AI actually produced." } },
+    { "@type": "Question", "name": "How do I write better prompts for an AI coding assistant?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Describe the result instead of the implementation, attach screenshots or sketches, keep only hard constraints, explicitly let the assistant decide the details, and iterate with small, concrete feedback such as an annotated screenshot." } },
+    { "@type": "Question", "name": "When is a long, detailed prompt still the right choice?",
+      "acceptedAnswer": { "@type": "Answer", "text": "When the details really are the requirements: API contracts, data formats, security rules, legal text, or an existing codebase's conventions. There, leaving things open causes bugs rather than creativity." } }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-back" href="../"><i class="fa-solid fa-arrow-left"></i><div>All posts<span>egemenoral.com/blog</span></div></a>
+    <div class="nav-right">
+      <a class="hide-sm" href="../../">CV</a>
+      <a class="active" href="../">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<article class="article">
+  <nav class="meta" aria-label="Breadcrumb"><a href="../../">Home</a> / <a href="../">Blog</a> / Prompting</nav>
+  <h1>Short Prompts vs Long Prompts: My 38-Section AI Prompt Lost to Three Sentences</h1>
+  <p class="meta">By Egemen Oral · October 4, 2026 · 6 min read</p>
+  <p class="lede"><strong>Short prompts vs long prompts</strong>: which one gets better results from AI? I accidentally ran the experiment on a real project. I built my portfolio twice with the same AI coding assistant, Claude: once from a huge, detailed specification and once from a few short sentences and a screenshot. The difference was not subtle, and it changed how I write prompts.</p>
+
+  <h2>The project: a Regular Show living room as a portfolio</h2>
+  <p>The idea was simple: instead of a grid of project cards, a cartoon living room from <em>Regular Show</em>. Every VHS tape on the shelf is one of my GitHub projects. You pick a tape, Mordecai puts it into an old CRT TV, and the project plays on the screen. Fun to imagine, hard to describe in words, which turned out to be the whole lesson.</p>
+
+  <h2>Attempt 1: the long prompt (a 38-section spec)</h2>
+  <p>I did what I thought a serious developer should do and wrote a <strong>very long prompt</strong>: 38 numbered sections covering the folder structure, the names of every animation function, the states of the state machine, eight milestones, an asset manifest, a parallax table and a list of forbidden things. Section one, in capital letters: <strong>NO 3D.</strong></p>
+  <p>The AI followed it faithfully. Every requirement was ticked off: the architecture, the state machine, the docs, the deployment workflow. And this is what came out:</p>
+
+  <figure>
+    <img src="../img/long-prompt-result-2d-room.jpg" alt="Result of the long AI prompt: a flat 2D cartoon room with a full-body standing Mordecai, a shelf of VHS tapes and a CRT TV" width="1280" height="720" loading="lazy">
+    <figcaption>Result of the long prompt: a flat 2D room. A full-body Mordecai stands in the middle of the room.</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/long-prompt-result-2d-mordecai-carrying.jpg" alt="Long prompt result: a 2D Mordecai walking and bobbing across the room while carrying a VHS tape to the TV" width="1280" height="720" loading="lazy">
+    <figcaption>Picking a tape: Mordecai walks and bobs across the room carrying the tape to the TV.</figcaption>
+  </figure>
+  <p>A flat 2D room, a full-body Mordecai standing in the middle, bobbing up and down as he walked to the shelf and carried the tape to the TV. Technically correct, well organised, every box ticked, and nothing about it made me want to click a tape.</p>
+  <p>Looking back, that wasn't the AI's fault. I had described the <em>how</em> in enormous detail and the <em>feel</em> almost not at all. And some of my rules were simply wrong: a few days later I was asking for exactly the thing I had banned in capital letters.</p>
+
+  <h2>Attempt 2: the short prompt (three sentences and a screenshot)</h2>
+  <p>Out of frustration I changed my style completely. My next messages looked like this:</p>
+  <blockquote>Here's a screenshot of the living room from the show. Make it look like this: these colours, this TV, Mordecai's hand. Keep my repos on the tapes. I'll leave the rest to you.</blockquote>
+  <p>The result jumped a level: a real 3D room with cartoon cel shading and ink outlines, the yellow staircase, Pops on the wall, and a jointed arm that actually grips the tape and pushes it into the VCR. Details I would never have thought to write into a spec.</p>
+
+  <figure>
+    <img src="../img/short-prompt-result-3d-portfolio-room.jpg" alt="Result of the short AI prompt: a cel-shaded 3D Regular Show style living room with a grey CRT TV, VHS tapes, a portrait of Pops and a yellow staircase" width="1280" height="720" loading="lazy">
+    <figcaption>Result of the short prompt: a cel-shaded 3D living room in the style of the show.</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/short-prompt-result-mordecai-hand-vcr.jpg" alt="Short prompt result: Mordecai's blue 3D hand pushing a VHS tape into the VCR under the CRT TV" width="1280" height="720" loading="lazy">
+    <figcaption>Mordecai's hand pushing a tape into the VCR. This came from a screenshot, not a paragraph.</figcaption>
+  </figure>
+
+  <h2>Short prompts vs long prompts: what actually changed</h2>
+  <div class="compare">
+    <div class="before">
+      <h3>Long prompt</h3>
+      <p>Described the implementation. Locked in guesses I made before seeing anything. The AI's effort went into satisfying a checklist. Result: a flat 2D room.</p>
+    </div>
+    <div class="after">
+      <h3>Short prompt</h3>
+      <p>Described the result and showed a reference. Left room for judgement. The effort went into making it look and feel right. Result: the 3D room I imagined.</p>
+    </div>
+  </div>
+
+  <h2>Why shorter AI prompts often work better</h2>
+  <ul>
+    <li><strong>Long prompts freeze early guesses.</strong> I wrote my spec before I knew what I wanted. Every detailed rule was a decision made with the least information I would ever have.</li>
+    <li><strong>A checklist pulls attention away from quality.</strong> With 38 requirements, "done" means "every box ticked", not "this is great". Modern AI models are good at taste and craft; a huge spec leaves them little room to use it.</li>
+    <li><strong>References beat adjectives.</strong> "Dark, nostalgic, cinematic, cozy" means different things to different people. One screenshot meant exactly one thing.</li>
+    <li><strong>Small, concrete feedback converges fast.</strong> The best part was the back and forth: "the fingers need black lines like this" plus a quick sketch on a screenshot. Five of those got me further than the whole spec.</li>
+    <li><strong>Trust changes the output.</strong> "I'll leave it to you" sounds lazy, but it tells the model the goal is a good result, not obedience.</li>
+  </ul>
+
+  <h2>Short is not vague: what a good prompt still needs</h2>
+  <p>This isn't "prompts don't matter". The short prompts worked because they still contained the few things that really mattered: the goal, a reference, and the one hard constraint (keep my five repos on the tapes). What I dropped was everything I didn't actually care about, or couldn't know yet.</p>
+
+  <figure>
+    <img src="../img/short-prompt-result-crt-project-screen.jpg" alt="The CRT TV screen playing a project: description, technologies and GitHub repository statistics" width="1280" height="720" loading="lazy">
+    <figcaption>What a tape plays: the project, its tech stack and live GitHub repo stats.</figcaption>
+  </figure>
+
+  <h2>How to write better AI prompts: my 5-step recipe</h2>
+  <ol class="recipe">
+    <li><strong>One sentence of intent.</strong> What should someone feel or be able to do?</li>
+    <li><strong>A reference.</strong> A screenshot, a sketch, a link. Show, don't describe.</li>
+    <li><strong>Only the hard constraints.</strong> The handful of things that truly must not change.</li>
+    <li><strong>Hand over the rest.</strong> "You decide the details" is a feature, not a cop-out.</li>
+    <li><strong>Iterate with pictures.</strong> Short, specific feedback on what you see, not on what you imagined.</li>
+  </ol>
+  <p>I'll still write long documents for things like APIs, where the details really are the requirements. But for anything creative, I now start small, show more, and let the model surprise me. It usually does.</p>
+
+  <h2>FAQ</h2>
+  <h3>Are short prompts better than long prompts for AI?</h3>
+  <p>For creative and design work, often yes. A short prompt with a clear goal, a reference and only the hard constraints leaves the model room to use its judgement, while a long spec locks in early guesses. For precise technical work, detailed requirements are still useful.</p>
+  <h3>How long should an AI prompt be?</h3>
+  <p>As long as it takes to state the goal, show a reference and list the constraints that truly cannot change, and no longer. Everything else is better handled through short rounds of feedback on what the AI actually produced.</p>
+  <h3>How do I write better prompts for an AI coding assistant?</h3>
+  <p>Describe the result instead of the implementation, attach screenshots or sketches, keep only hard constraints, let the assistant decide the details, and iterate with small, concrete feedback such as an annotated screenshot.</p>
+  <h3>When is a long, detailed prompt still the right choice?</h3>
+  <p>When the details are the requirements: API contracts, data formats, security rules, or an existing codebase's conventions. There, leaving things open causes bugs, not creativity.</p>
+
+  <div class="cta">
+    <a class="btn btn-primary" href="https://room.egemenoral.com"><i class="fa-solid fa-tv"></i> Try the 3D portfolio</a>
+    <a class="btn btn-outline" href="https://github.com/egemenoral1-jpg/ProjeSitesi" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source code</a>
+  </div>
+</article>
+</main>
+
+<footer>© 2026 Egemen Oral · built while learning</footer>
+<script src="../theme.js"></script>
+</body>
+</html>
