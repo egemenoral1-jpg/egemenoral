@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shorter prompts, better products — Egemen Oral</title>
+<meta name="description" content="I gave an AI a 38-section spec, then three sentences and a screenshot. What building my Regular Show style portfolio taught me about prompting.">
+<meta property="og:title" content="I gave an AI a 38-section spec. Then three sentences and a screenshot.">
+<meta property="og:description" content="Why short prompts with a reference and some trust beat my huge, detailed spec.">
+<meta property="og:image" content="https://egemenoral.com/blog/img/room.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-back" href="../"><i class="fa-solid fa-arrow-left"></i><div>All posts<span>egemenoral.com/blog</span></div></a>
+    <div class="nav-right">
+      <a class="hide-sm" href="../../">CV</a>
+      <a class="active" href="../">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+    </div>
+  </div>
+</nav>
+
+<article class="article">
+  <span class="meta">October 2026 · 5 min read · AI, prompting</span>
+  <h1>I gave an AI a 38-section spec. Then three sentences and a screenshot. Guess which one worked.</h1>
+  <p class="lede">I recently built my portfolio as a cartoon living room from <em>Regular Show</em>: every VHS tape is one of my projects, and Mordecai's hand pushes the tape you pick into an old CRT. I built it with an AI coding assistant, and the most useful thing I learned wasn't about Three.js. It was about how I talk to the AI.</p>
+
+  <figure>
+    <img src="../img/room.jpg" alt="The finished room: a grey CRT on a wooden cabinet, VHS tapes on both sides, a portrait of Pops on the wall and a yellow staircase">
+    <figcaption>The finished room. Every tape is a GitHub project.</figcaption>
+  </figure>
+
+  <h2>Attempt one: the mega-prompt</h2>
+  <p>I did what I thought a "serious" developer should do. I wrote a giant specification: 38 numbered sections covering the folder structure, the names of every animation function, the exact states of the state machine, eight milestones, an asset manifest, a parallax layer table, and a list of things that were forbidden. Section one, in capital letters: <strong>NO 3D.</strong></p>
+  <p>The AI followed it faithfully. Every section was ticked off: the architecture, the docs, the deployment workflow, the state machine, all of it. And the result was... fine. Technically correct, well organised, and completely flat. A placeholder room with a placeholder character walking around. Nothing about it made me want to click a tape.</p>
+  <p>Looking back, that wasn't the AI's fault. I had described the <em>how</em> in enormous detail and the <em>feel</em> almost not at all. And some of my rules were simply wrong. A few days later I was asking for exactly the thing I had banned in capital letters.</p>
+
+  <h2>Attempt two: three sentences and a picture</h2>
+  <p>Out of frustration, I changed my style completely. My next messages looked like this:</p>
+  <blockquote>Here's a screenshot of the living room from the show. Make it look like this: these colours, this TV, Mordecai's hand. Keep my repos on the tapes. I'll leave the rest to you.</blockquote>
+  <p>That was it. And the result jumped a level: a real 3D room with cel shading and ink outlines like the cartoon, the yellow staircase, Pops on the wall, a jointed arm that actually grips the tape and pushes it into the VCR. Things I would never have thought to put in a spec.</p>
+
+  <figure>
+    <img src="../img/hand.jpg" alt="Mordecai's blue hand pushing a VHS tape labelled hisse-takip-ai into the VCR under the TV">
+    <figcaption>Mordecai's hand pushing a tape into the VCR. This came from a screenshot, not a paragraph.</figcaption>
+  </figure>
+
+  <div class="compare">
+    <div class="before">
+      <h3>The long prompt</h3>
+      <p>Described the implementation. Locked in guesses I made before seeing anything. The AI's effort went into satisfying a checklist.</p>
+    </div>
+    <div class="after">
+      <h3>The short prompts</h3>
+      <p>Described the result and showed a reference. Left room for judgement. The effort went into making it look and feel right.</p>
+    </div>
+  </div>
+
+  <h2>Why shorter worked better</h2>
+  <ul>
+    <li><strong>Long prompts freeze early guesses.</strong> I wrote my spec before I knew what I wanted. Every detailed rule was a decision made with the least information I would ever have.</li>
+    <li><strong>A checklist pulls attention away from quality.</strong> With 38 requirements, "done" means "every box ticked", not "this is great". Modern models are good at taste and craft; a huge spec leaves them little room to use it.</li>
+    <li><strong>References beat adjectives.</strong> "Dark, nostalgic, cinematic, cozy" means different things to different people. One screenshot of the show meant exactly one thing.</li>
+    <li><strong>Small, concrete feedback converges fast.</strong> The best part of the process was the back and forth: "the fingers need black lines like this" plus a quick sketch on top of a screenshot. Five of those got me further than the whole spec.</li>
+    <li><strong>Trust changes the output.</strong> "I'll leave it to you" sounds lazy, but it tells the model that the goal is a good result, not obedience.</li>
+  </ul>
+
+  <h2>Short isn't the same as vague</h2>
+  <p>This isn't "prompts don't matter". The short prompts worked because they still contained the few things that really mattered: the goal, a reference, and the one hard constraint (keep my five repos on the tapes). What I dropped was everything I didn't actually care about, or couldn't know yet.</p>
+
+  <figure>
+    <img src="../img/tv.jpg" alt="The CRT screen showing a project description, technologies and repository statistics">
+    <figcaption>What a tape plays: the project, its stack and live repo stats.</figcaption>
+  </figure>
+
+  <h2>My new recipe</h2>
+  <ol class="recipe">
+    <li><strong>One sentence of intent.</strong> What should someone feel or be able to do?</li>
+    <li><strong>A reference.</strong> A screenshot, a sketch, a link. Show, don't describe.</li>
+    <li><strong>Only the hard constraints.</strong> The handful of things that truly must not change.</li>
+    <li><strong>Hand over the rest.</strong> "You decide the details" is a feature, not a cop-out.</li>
+    <li><strong>Iterate with pictures.</strong> Short, specific feedback on what you see, not on what you imagined.</li>
+  </ol>
+  <p>I'll still write long documents for things like APIs, where details really are the requirements. But for anything creative, I now start small, show more, and let the model surprise me. It usually does.</p>
+
+  <div class="cta">
+    <a class="btn btn-primary" href="https://room.egemenoral.com"><i class="fa-solid fa-tv"></i> Step into the room</a>
+    <a class="btn btn-outline" href="https://github.com/egemenoral1-jpg/ProjeSitesi" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source code</a>
+  </div>
+</article>
+
+<footer>© 2026 Egemen Oral · built while learning</footer>
+<script src="../theme.js"></script>
+</body>
+</html>

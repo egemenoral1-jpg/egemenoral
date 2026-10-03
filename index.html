@@ -87,6 +87,14 @@ a{color:inherit;}
   flex:none;
 }
 .theme-toggle:hover{transform:rotate(18deg);}
+.nav-actions{display:flex; align-items:center; gap:12px;}
+.nav-blog{
+  display:inline-flex; align-items:center; gap:7px; padding:7px 14px; border-radius:999px;
+  border:1px solid var(--border); background:var(--surface); text-decoration:none;
+  font-size:.84rem; font-weight:600; color:var(--text); transition:border-color .2s ease, transform .2s ease;
+}
+.nav-blog i{color:var(--accent-2); font-size:.8rem;}
+.nav-blog:hover{border-color:var(--accent-2); transform:translateY(-1px);}
 .theme-toggle:focus-visible, a:focus-visible, button:focus-visible{
   outline:2px solid var(--accent-3); outline-offset:2px;
 }
@@ -328,9 +336,12 @@ footer p{color:var(--text-muted); font-size:.82rem; font-family:'IBM Plex Mono',
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      <i class="fa-solid fa-moon" id="themeIcon"></i>
-    </button>
+    <div class="nav-actions">
+      <a class="nav-blog" href="blog/"><i class="fa-solid fa-pen-nib"></i> Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
+    </div>
   </div>
 </nav>
 

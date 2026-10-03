@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Egemen Oral</title>
+<meta name="description" content="Notes from building things while I learn: AI, data, and the occasional cartoon living room.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-back" href="../"><i class="fa-solid fa-arrow-left"></i><div>Egemen Oral<span>back to CV</span></div></a>
+    <div class="nav-right">
+      <a class="hide-sm" href="../#projects">Projects</a>
+      <a class="active" href="./">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="blog-head">
+    <span class="tag">// notes while I learn</span>
+    <h1>Blog</h1>
+    <p>Short write-ups about the things I build, what went wrong, and what I'd do differently next time.</p>
+  </header>
+
+  <div class="post-list">
+    <a class="post-card" href="shorter-prompts/">
+      <img src="img/room.jpg" alt="The cartoon living room portfolio: a CRT TV with VHS tapes stacked on both sides" loading="lazy">
+      <div class="body">
+        <span class="meta">October 2026 · 5 min read · AI, prompting</span>
+        <h2>I gave an AI a 38-section spec. Then three sentences and a screenshot. Guess which one worked.</h2>
+        <p>What building my Regular Show style portfolio taught me about prompting: why my huge, detailed prompt produced something flat, and why short prompts with a reference and some trust produced exactly what I imagined.</p>
+        <span class="read">Read the post →</span>
+      </div>
+    </a>
+  </div>
+</main>
+
+<footer>© 2026 Egemen Oral · built while learning</footer>
+<script src="theme.js"></script>
+</body>
+</html>
